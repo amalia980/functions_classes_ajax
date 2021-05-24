@@ -36,8 +36,8 @@ function outputValue() {                                 // step 2
 
 /*=================classes #1==================*/
 
-class Animal {
-    constructor () {
+/*class Animal {
+    constructor (sound) {
        this.sound = sound;
     }
 
@@ -48,7 +48,7 @@ class Animal {
 
     const myAnimal = new Animal("woof woof!");
     myAnimal.saySomething();
-
+*/
     /*=================Fetch==================*/
 /*
     const URL = "https://randomfox.ca/floof/"
@@ -67,3 +67,38 @@ class Animal {
     }   
 
     fetch(URL).then(whenFetchIsDone);
+    */
+
+    /*=================Fizz buzz test==================*/
+
+    const divThree= "Fizz"; 
+    const divFive= "Buzz"; 
+    const divThreeFive= "FizzBuzz"; 
+
+        for (i = 1; i < 101; i++) {
+            
+            if (i % 3 === 0) {         // prints Fizz for numbers that can divide with three. each third number
+                console.log("Fizz");
+            }
+
+            else if(i % 5 === 0) {    // prints Buzz for numbers that can divide with five
+                console.log("Buzz");
+            }
+
+            else if (i % 15 === 0) {  // prints FizzBuzz for numbers that can divide with three and five
+                console.log("FizzBuzz");
+            }
+
+            else {                   // prints out the rest of the numbers that dont have a condition
+                console.log(i);
+            }
+        }
+
+    /*=================Array==================*/
+
+    const numbers = [5, 10, 2, 18, 19, 22, 30, 1];
+    
+    numbers.sort((a, b) => b-a); // prints out the numbers with biggest to smallest value in array
+
+    console.log(numbers);
+
