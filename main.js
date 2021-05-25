@@ -36,7 +36,7 @@ function outputValue() {                                 // step 2
 
 /*=================classes #1==================*/
 
-/*class Animal {
+class Animal {
     constructor (sound) {
        this.sound = sound;
     }
@@ -48,26 +48,31 @@ function outputValue() {                                 // step 2
 
     const myAnimal = new Animal("woof woof!");
     myAnimal.saySomething();
-*/
+
     /*=================Fetch==================*/
-/*
+
     const URL = "https://randomfox.ca/floof/"
 
     function insertImageOfFox(imageSrcUrl) {
-    imageSrcUrl
+        const img = document.createElement("img");
+        img.setAttribute("src", imageSrcUrl);
+
+        document.body.appendChild(img);
+    
     }
 
-    function whenJasonIsDone(data) {
-    imageSrcUrl.then(data => {
-        catPic.innerHTML = `<img src="${data.image}"/>`)
+    function whenJsonIsDone(data) {
+        insertImageOfFox(data.image);
+
+        
     }
 
     function whenFetchIsDone(response) {
-        response.json().then()
+        response.json().then(whenJsonIsDone);
     }   
 
     fetch(URL).then(whenFetchIsDone);
-    */
+    
 
     /*=================Fizz buzz test==================*/
 
